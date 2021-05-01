@@ -65,11 +65,12 @@ public class MovieManagerTest {
 
     @Test
     void shouldShowMoviesInConstructor() {
-        MovieManager manager = new MovieManager(3);
-        Movie[] expected = new Movie[] {third, second, first};
+        MovieManager manager = new MovieManager(4);
+        Movie[] expected = new Movie[]{fourth, third, second, first};
         manager.add(first);
         manager.add(second);
         manager.add(third);
+        manager.add(fourth);
 
         assertArrayEquals(expected, manager.getAll());
     }
@@ -80,8 +81,7 @@ public class MovieManagerTest {
         Movie[] expected = new Movie[0];
         manager.add(first);
         manager.add(second);
+
         assertArrayEquals(expected, manager.getAll());
     }
-
-
 }
