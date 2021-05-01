@@ -6,7 +6,7 @@ import ru.netology.domain.Movie;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class MovieManagerTestNonEmptyWithSetup {
+public class MovieManagerTest {
     private MovieManager manager = new MovieManager();
     Movie first = new Movie(1, 1, "Бладшот", "боевик", "https://img1.ru");
     Movie second = new Movie(2, 2, "Вперёд", "мультфильм", "https://img2.ru");
