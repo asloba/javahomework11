@@ -22,11 +22,12 @@ public class MovieManager {
     }
 
     public Movie[] getAll() {
-        if (movies.length < moviesToShow) {
-            moviesToShow = movies.length;
+        int count = moviesToShow;
+        if (movies.length < count) {
+            count = movies.length;
         }
-        Movie[] result = new Movie[moviesToShow];
-        for (int i = 0; i < moviesToShow; i++) {
+        Movie[] result = new Movie[count];
+        for (int i = 0; i < count; i++) {
             int index = movies.length - i - 1;
             result[i] = movies[index];
         }
